@@ -1,5 +1,5 @@
 import java.util.*;
-
+import java.util.Scanner;
 public class Needle {
 
     private Random generator;

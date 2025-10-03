@@ -12,12 +12,5 @@ public class Main {
             System.out.println(x + " Abundant? " + p.isAbundant());
             System.out.println(x + " Narcissistic? " + p.isNarcissistic());
         }
-        //needle testing
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Drops in total: ");
-        int D = sc.nextInt(); //input number of drops
-        double pi = new Needle().runExperiment(D);
-        System.out.println("Pi is: " + pi);
-
     }
 }
