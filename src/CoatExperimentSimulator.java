@@ -17,15 +17,16 @@ public class CoatExperimentSimulator {
     }
 
     public int[] simulateCoatExperiment(int iterations) {
-        int [] matchesPerTrial = new int[iterations];
+        int [] results = new int[iterations];
         for (int i = 0; i < iterations; i++) {
           int[] permutation = RandomOrderGenerator.getRandomOrder(numberOfPeople);
-            matchesPerTrial[i] = numPplWhoGotTheirCoat(permutation);
+            results[i] = numPplWhoGotTheirCoat(permutation);
         }
-        return matchesPerTrial;
+        return results;
     }
 
     public double answerToQuestionOne(int[] results) {
+
         return 0.0;
     }
 
