@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class CoatExperimentSimulator {
 
     private int numberOfPeople;
@@ -41,5 +43,12 @@ public class CoatExperimentSimulator {
             answer2 += results[i];
         }
         return (double) answer2 / results.length; //calculates average
+    }
+    public static void main(String[] args) {
+        CoatExperimentSimulator simulator = new CoatExperimentSimulator(10);
+        int[] results = simulator.simulateCoatExperiment(100000);
+
+        System.out.println("Answer to Question One: " + simulator.answerToQuestionOne(results));
+        System.out.println("Answer to Question Two Average: " + simulator.answerToQuestionTwo(results));
     }
 }
