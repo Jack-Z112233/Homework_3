@@ -32,11 +32,14 @@ public class CoatExperimentSimulator {
                 answer1++;
             }
         }
-        return (double) answer1 / results.length;
+        return (double) answer1 / results.length; //calculates probability
     }
 
     public double answerToQuestionTwo(int[] results) {
-
-        return 0.0;
+        int answer2 = 0;
+        for (int i = 0; i < results.length; i++) {
+            answer2 += results[i];
+        }
+        return (double) answer2 / results.length; //calculates average
     }
 }
