@@ -23,4 +23,11 @@ public class Needle {
         } //just in case that the super rare possibility that this happens
         return (double) totalDrops / hits; //calculates pi
     }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Drops in total: ");
+        int D = sc.nextInt(); //input number of drops
+        double pi = new Needle().runExperiment(D);
+        System.out.println("Pi is: " + pi);
+    }
 }
