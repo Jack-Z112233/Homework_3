@@ -7,17 +7,22 @@ public class CoatExperimentSimulator {
     }
 
     public int numPplWhoGotTheirCoat(int[] permutation) {
-        int matches = 0;
+        int numgottheircoat = 0;
         for (int i = 0; i < permutation.length; i++) {
             if (permutation[i] == i + 1) {
-                matches++;
+                numgottheircoat++;
             }
         }
-        return matches;
+        return numgottheircoat;
     }
 
     public int[] simulateCoatExperiment(int iterations) {
-        return null;
+        int [] matchesPerTrial = new int[iterations];
+        for (int i = 0; i < iterations; i++) {
+          int[] permutation = RandomOrderGenerator.getRandomOrder(numberOfPeople);
+            matchesPerTrial[i] = numPplWhoGotTheirCoat(permutation);
+        }
+        return matchesPerTrial;
     }
 
     public double answerToQuestionOne(int[] results) {
